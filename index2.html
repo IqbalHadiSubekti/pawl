@@ -1,0 +1,22 @@
+<!--file : index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+  {% if title %}
+		<title>{{ title }} - PAW Lanjut</title>
+  {% else %}
+		<title>Selamat datang di Blog PAW Lanjut</title>
+  {% endif %}
+  </head>
+<body>
+  <h1>Selamat datang.</h1>
+  <p>Selamat datang, <strong>{{ user.username }}</strong> Berikut ini adalah quote
+dari beberapa penulis.</p>
+  <ul>
+  {% for post in posts %}
+		<li>{{ post.penulis.username}} mengatakan: <strong>{{ post.tulisan
+}}</strong></li>
+  {% endfor %}
+  </ul>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!--file : index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+  {% if title %}
+		<title>{{ title }} - PAW Lanjut</title>
+  {% else %}
+		<title>Selamat datang di Blog PAW Lanjut</title>
+  {% endif %}
+  </head>
+<body>
+  <h1>Selamat datang.</h1>
+  <p>Selamat datang, <strong>{{ user.username }}</strong> Berikut ini adalah
+daftar buku Informatika.</p>
+  <ul>
+  {% for post in posts %}
+		<li>{{ post.pengarang.username }} : <strong>{{ post.tulisan
+}}</strong></li>
+		<li>{{ post.judul.username }} : <strong>{{ post.tulisan
+}}</strong></li>
+		<li>{{ post.penerbit.username }} : <strong>{{ post.tulisan
+}}</strong></li>
+		<li>{{ post.tahun.username }} : <strong>{{ post.tulisan
+}}</strong></li>
+  {% endfor %}
+  </ul>
+</body>
+</html>
